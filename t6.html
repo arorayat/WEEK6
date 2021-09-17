@@ -1,0 +1,51 @@
+<html>
+<head>
+  <script src=
+"https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js">
+  </script>
+</head>
+<body>
+<form id="demo">
+  <!-- text -->
+<h2>Form User</h2>
+<p>Enter Name:
+    <input type="text" v-model="name">
+  </p>
+<p>Enter Contact:
+    <input type="text" v-model="contact">
+  </p>
+<p>Enter Email:
+    <input type="text" v-model="email">
+  </p>
+  <hr>
+ 
+  <p>
+<h2>Choose Your Package</h2>
+    <select v-model="selected">
+      <option>Manali Package</option>
+      <option>Shimla Package</option>
+      <option>Kashmir Package</option>
+      <option>Agra Package</option>
+    </select>
+    {{selected}}
+  </p>
+<hr>
+  <div id="app">
+<h2>Checkbox for accepting policy</h2>
+ <input type="checkbox" v-model="x"></input>I accept all the policies of your website.
+ {{ x }}
+</div>
+<hr>
+  <p><pre>data: {{$data | json 2}}</pre></p>
+</form>
+<hr>
+<h2>Lazy Modifier</h2>
+<input v-model="msg" lazy>
+<hr>
+<br>
+<h2>TypeCasting</h2>
+<input v-model="age" number>
+
+<script src="t6js.js"></script>
+</body>
+</html>
